@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <rect width="390" height="844" rx="34" fill="#081B33"/>
+  <rect x="14" y="14" width="362" height="816" rx="28" fill="#F6F8FB"/>
+  <rect x="34" y="38" width="322" height="54" rx="12" fill="#FFFFFF"/>
+  <text x="52" y="70" font-family="Arial" font-size="18" font-weight="700" fill="#081B33">AtlanTech</text>
+  <circle cx="322" cy="65" r="16" fill="#0B5FFF"/>
+  <text x="316" y="71" font-family="Arial" font-size="16" font-weight="700" fill="#FFFFFF">2</text>
+  <rect x="34" y="108" width="322" height="42" rx="12" fill="#E9EEF7"/>
+  <text x="54" y="134" font-family="Arial" font-size="13" fill="#64748B">Rechercher telephone, laptop, accessoire...</text>
+  <rect x="34" y="168" width="322" height="118" rx="16" fill="#0B5FFF"/>
+  <text x="56" y="206" font-family="Arial" font-size="24" font-weight="700" fill="#FFFFFF">Promo tech</text>
+  <text x="56" y="232" font-family="Arial" font-size="14" fill="#DCEBFF">Prix USD + HTG, livraison rapide</text>
+  <rect x="56" y="250" width="104" height="24" rx="12" fill="#FF8A00"/>
+  <text x="74" y="267" font-family="Arial" font-size="12" font-weight="700" fill="#FFFFFF">Voir offres</text>
+  <circle cx="293" cy="226" r="42" fill="#DCEBFF" opacity=".9"/>
+  <rect x="266" y="204" width="54" height="72" rx="10" fill="#081B33"/>
+  <rect x="274" y="214" width="38" height="50" rx="4" fill="#FFFFFF"/>
+  <text x="34" y="324" font-family="Arial" font-size="18" font-weight="700" fill="#1F2937">Categories</text>
+  <g font-family="Arial" font-size="12" font-weight="700" fill="#1F2937">
+    <rect x="34" y="342" width="72" height="74" rx="12" fill="#FFFFFF"/>
+    <circle cx="70" cy="369" r="15" fill="#E9EEF7"/>
+    <text x="48" y="399">Phones</text>
+    <rect x="118" y="342" width="72" height="74" rx="12" fill="#FFFFFF"/>
+    <circle cx="154" cy="369" r="15" fill="#E9EEF7"/>
+    <text x="133" y="399">Laptops</text>
+    <rect x="202" y="342" width="72" height="74" rx="12" fill="#FFFFFF"/>
+    <circle cx="238" cy="369" r="15" fill="#E9EEF7"/>
+    <text x="215" y="399">Audio</text>
+    <rect x="286" y="342" width="70" height="74" rx="12" fill="#FFFFFF"/>
+    <circle cx="321" cy="369" r="15" fill="#E9EEF7"/>
+    <text x="302" y="399">More</text>
+  </g>
+  <text x="34" y="456" font-family="Arial" font-size="18" font-weight="700" fill="#1F2937">Populaires</text>
+  <g>
+    <rect x="34" y="474" width="150" height="214" rx="14" fill="#FFFFFF"/>
+    <rect x="52" y="492" width="114" height="92" rx="12" fill="#E9EEF7"/>
+    <rect x="86" y="506" width="46" height="66" rx="8" fill="#081B33"/>
+    <text x="52" y="615" font-family="Arial" font-size="14" font-weight="700" fill="#1F2937">Smartphone X</text>
+    <text x="52" y="637" font-family="Arial" font-size="13" fill="#64748B">$249 | 33,625 HTG</text>
+    <rect x="52" y="654" width="100" height="24" rx="12" fill="#0B5FFF"/>
+    <text x="73" y="671" font-family="Arial" font-size="12" font-weight="700" fill="#FFFFFF">Ajouter</text>
+    <rect x="206" y="474" width="150" height="214" rx="14" fill="#FFFFFF"/>
+    <rect x="224" y="492" width="114" height="92" rx="12" fill="#E9EEF7"/>
+    <rect x="244" y="526" width="74" height="38" rx="6" fill="#081B33"/>
+    <text x="224" y="615" font-family="Arial" font-size="14" font-weight="700" fill="#1F2937">Laptop Pro</text>
+    <text x="224" y="637" font-family="Arial" font-size="13" fill="#64748B">$699 | 94,365 HTG</text>
+    <rect x="224" y="654" width="100" height="24" rx="12" fill="#0B5FFF"/>
+    <text x="245" y="671" font-family="Arial" font-size="12" font-weight="700" fill="#FFFFFF">Ajouter</text>
+  </g>
+  <rect x="34" y="750" width="322" height="56" rx="18" fill="#FFFFFF"/>
+  <text x="55" y="784" font-family="Arial" font-size="12" font-weight="700" fill="#0B5FFF">Accueil</text>
+  <text x="123" y="784" font-family="Arial" font-size="12" fill="#64748B">Boutique</text>
+  <text x="203" y="784" font-family="Arial" font-size="12" fill="#64748B">Favoris</text>
+  <text x="278" y="784" font-family="Arial" font-size="12" fill="#64748B">Compte</text>
+</svg>

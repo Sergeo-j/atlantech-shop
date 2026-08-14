@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <rect width="390" height="844" rx="34" fill="#081B33"/>
+  <rect x="14" y="14" width="362" height="816" rx="28" fill="#F6F8FB"/>
+  <text x="36" y="70" font-family="Arial" font-size="22" font-weight="700" fill="#081B33">Produit</text>
+  <circle cx="330" cy="62" r="18" fill="#FFFFFF"/>
+  <text x="324" y="69" font-family="Arial" font-size="18" fill="#0B5FFF">♡</text>
+  <rect x="34" y="94" width="322" height="260" rx="18" fill="#FFFFFF"/>
+  <circle cx="195" cy="216" r="92" fill="#E9EEF7"/>
+  <rect x="158" y="132" width="74" height="154" rx="16" fill="#081B33"/>
+  <rect x="170" y="148" width="50" height="116" rx="7" fill="#FFFFFF"/>
+  <rect x="150" y="326" width="90" height="16" rx="8" fill="#DCEBFF"/>
+  <rect x="34" y="378" width="84" height="26" rx="13" fill="#19A974"/>
+  <text x="51" y="396" font-family="Arial" font-size="12" font-weight="700" fill="#FFFFFF">En stock</text>
+  <text x="34" y="438" font-family="Arial" font-size="24" font-weight="700" fill="#1F2937">Smartphone X 128GB</text>
+  <text x="34" y="468" font-family="Arial" font-size="16" fill="#64748B">Ecran 6.5, 8GB RAM, double SIM</text>
+  <text x="34" y="512" font-family="Arial" font-size="30" font-weight="700" fill="#0B5FFF">$249</text>
+  <text x="112" y="511" font-family="Arial" font-size="16" font-weight="700" fill="#1F2937">33,625 HTG</text>
+  <rect x="34" y="536" width="322" height="74" rx="14" fill="#FFFFFF"/>
+  <text x="54" y="565" font-family="Arial" font-size="14" font-weight="700" fill="#1F2937">Livraison</text>
+  <text x="54" y="588" font-family="Arial" font-size="13" fill="#64748B">Disponible a Les Cayes et zones proches</text>
+  <rect x="34" y="634" width="154" height="54" rx="16" fill="#FFFFFF"/>
+  <text x="61" y="667" font-family="Arial" font-size="14" font-weight="700" fill="#0B5FFF">Ajouter</text>
+  <rect x="202" y="634" width="154" height="54" rx="16" fill="#0B5FFF"/>
+  <text x="236" y="667" font-family="Arial" font-size="14" font-weight="700" fill="#FFFFFF">Acheter</text>
+  <text x="34" y="728" font-family="Arial" font-size="18" font-weight="700" fill="#1F2937">Description</text>
+  <text x="34" y="755" font-family="Arial" font-size="13" fill="#64748B">Produit garanti, facture disponible, service client</text>
+  <text x="34" y="775" font-family="Arial" font-size="13" fill="#64748B">AtlanTech pour support apres achat.</text>
+</svg>

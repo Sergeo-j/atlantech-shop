@@ -1,0 +1,2 @@
+# Bloquer tout accès direct au dossier /includes/
+Require all denied

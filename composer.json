@@ -1,0 +1,12 @@
+{
+    "name": "atlantech/shop",
+    "description": "AtlanTech E-commerce - Les Cayes, Haïti",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "AtlanTech\\": "src/"
+        }
+    }
+}

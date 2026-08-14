@@ -1,0 +1,230 @@
+# ============================================================================
+# AtlanTech Shop — .htaccess Principal
+# Sécurité, performance, SEO
+# ============================================================================
+
+# ── Options de base ──────────────────────────────────────────────────────────
+Options -Indexes -MultiViews
+ServerSignature Off
+
+# ── Moteur de réécriture ─────────────────────────────────────────────────────
+RewriteEngine On
+
+# ── HTTPS forcé ──────────────────────────────────────────────────────────────
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ── Trailing slash canonical ──────────────────────────────────────────────────
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# ── Sitemap dynamique ─────────────────────────────────────────────────────────
+RewriteRule ^sitemap\.xml$ sitemap.xml.php [L,QSA]
+
+# ============================================================================
+# SÉCURITÉ — Bloquer accès aux fichiers sensibles
+# ============================================================================
+
+# Bloquer .env et variantes
+<FilesMatch "^\.env(\..*)?$">
+    Require all denied
+</FilesMatch>
+
+# Bloquer fichiers SQL (dumps de base de données)
+<FilesMatch "\.(sql|sql\.gz|sql\.bz2)$">
+    Require all denied
+</FilesMatch>
+
+# Bloquer archives (backups complets, souvent avec .env et code source dedans)
+<FilesMatch "\.(zip|tar|gz|tar\.gz|rar|7z)$">
+    Require all denied
+</FilesMatch>
+
+# Bloquer fichiers de backup et temporaires
+<FilesMatch "\.(bak|old|orig|save|swp|swo|tmp|log|~)$">
+    Require all denied
+</FilesMatch>
+
+# Bloquer fichiers .php.new (backups d'éditeur)
+<FilesMatch "\.php\.new$">
+    Require all denied
+</FilesMatch>
+
+# Bloquer fichiers de configuration sensibles
+<FilesMatch "^(composer\.(json|lock)|package(-lock)?\.json|webpack\.config\.js|\.gitignore|\.gitattributes|Makefile|Dockerfile|docker-compose\.yml)$">
+    Require all denied
+</FilesMatch>
+
+# Bloquer accès direct aux includes PHP
+<FilesMatch "^(config|session|functions|auth|helpers|header_counters|fonctions|promo_codes|checkout_security)\.php$">
+    Require all denied
+</FilesMatch>
+
+# Bloquer fichiers Markdown, scripts et logs exposés
+<FilesMatch "\.(md|log|sh|py)$">
+    Require all denied
+</FilesMatch>
+
+# Bloquer fichiers .txt sauf robots.txt (public requis par Google)
+# Note: LiteSpeed ne supporte pas les negative lookaheads — on bloque tous les .txt
+# puis on ré-autorise robots.txt via <Files>
+<FilesMatch "\.txt$">
+    Require all denied
+</FilesMatch>
+<Files "robots.txt">
+    Require all granted
+</Files>
+
+# Bloquer le fichier Stucture (artefact dev)
+<FilesMatch "^Stucture$">
+    Require all denied
+</FilesMatch>
+
+# ── Bloquer accès direct aux dossiers sensibles ───────────────────────────────
+RewriteRule ^(vendor|config|includes|migrations|classes|lib|checkout/ecelestin)(/|$) - [F,L]
+
+# ── Bloquer accès direct aux portails admin depuis l'extérieur (optionnel) ────
+# Décommenter pour restreindre à une IP fixe
+# RewriteCond %{REQUEST_URI} ^/(admins|superadmin|backoffice|admin)/ [NC]
+# RewriteCond %{REMOTE_ADDR} !^123\.456\.789\.0$
+# RewriteRule ^ - [F,L]
+
+# ── Protéger les dossiers uploads (pas d'exécution PHP) ──────────────────────
+RewriteCond %{REQUEST_URI} ^/uploads/ [NC]
+RewriteCond %{REQUEST_FILENAME} \.(php|php3|php4|php5|php7|phtml|phar)$ [NC]
+RewriteRule ^ - [F,L]
+
+RewriteCond %{REQUEST_URI} ^/admins/uploads/ [NC]
+RewriteCond %{REQUEST_FILENAME} \.(php|php3|php4|php5|php7|phtml|phar)$ [NC]
+RewriteRule ^ - [F,L]
+
+# ── Bloquer injections dans la query string ───────────────────────────────────
+RewriteCond %{QUERY_STRING} (union.*select|insert.*into|drop.*table|select.*from|delete.*from|update.*set) [NC]
+RewriteRule ^ - [F,L]
+
+RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+RewriteRule ^ - [F,L]
+
+# ── Bloquer User-Agents malveillants ─────────────────────────────────────────
+RewriteCond %{HTTP_USER_AGENT} (Havij|libwww-perl|wget|python|nikto|scan|nmap|sqlmap|acunetix) [NC]
+RewriteRule ^ - [F,L]
+
+# ============================================================================
+# EN-TÊTES DE SÉCURITÉ HTTP
+# ============================================================================
+
+<IfModule mod_headers.c>
+    # Empêcher le clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Empêcher le MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Activer le filtre XSS du navigateur
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Politique de référent
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # HSTS — HTTPS forcé 1 an, sous-domaines inclus, éligible preload
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Content Security Policy (ajuster selon les CDN utilisés)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'self';"
+
+    # Permissions Policy
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+    # Supprimer les en-têtes qui révèlent la technologie
+    Header unset X-Powered-By
+    Header always unset X-Powered-By
+    Header unset Server
+</IfModule>
+
+# ============================================================================
+# PERFORMANCE — Cache navigateur
+# ============================================================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png  "access plus 1 year"
+    ExpiresByType image/gif  "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # CSS et JavaScript
+    ExpiresByType text/css "access plus 6 months"
+    ExpiresByType application/javascript "access plus 6 months"
+    ExpiresByType text/javascript "access plus 6 months"
+
+    # Fonts
+    ExpiresByType font/woff  "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+
+    # HTML et PHP (pas de cache)
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType application/x-httpd-php "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Cache-Control pour les assets statiques
+    <FilesMatch "\.(ico|jpg|jpeg|png|gif|webp|svg|css|js|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Pas de cache pour les pages PHP
+    <FilesMatch "\.php$">
+        Header set Cache-Control "no-store, no-cache, must-revalidate"
+        Header set Pragma "no-cache"
+    </FilesMatch>
+</IfModule>
+
+# ── Compression Gzip ─────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE application/javascript text/javascript
+    AddOutputFilterByType DEFLATE application/json application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ── ETag (désactiver pour éviter les problèmes multi-serveur) ────────────────
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# ============================================================================
+# SEO — Redirections canoniques
+# ============================================================================
+
+# Rediriger www vers non-www
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# Page 404 personnalisée
+ErrorDocument 400 /404.php
+ErrorDocument 401 /404.php
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php
+ErrorDocument 500 /404.php
+
+# ============================================================================
+# PROTECTION ADDITIONNELLE
+# ============================================================================
+
+# Bloquer méthodes HTTP dangereuses (TRACE, DELETE, PUT, PATCH via RewriteRule)
+# Note: LimitExcept peut causer des problèmes sur LiteSpeed — on utilise RewriteRule
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK|DELETE|CONNECT) [NC]
+RewriteRule ^ - [F,L]
+
+# Taille max des uploads (10 MB)
+LimitRequestBody 10485760

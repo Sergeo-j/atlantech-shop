@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 420" role="img" aria-labelledby="title desc">
+  <title id="title">AtlanTech official logo</title>
+  <desc id="desc">AtlanTech wordmark with black text and orange compass-style symbol.</desc>
+  <defs>
+    <style>
+      .wordmark {
+        fill: #000000;
+        font-family: Impact, "Arial Black", "Helvetica Neue", Arial, sans-serif;
+        font-size: 220px;
+        font-weight: 900;
+        letter-spacing: 4px;
+      }
+      .orange {
+        fill: #ff9800;
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(0 4)">
+    <text class="wordmark" x="0" y="300">ATL</text>
+
+    <g transform="translate(515 32)">
+      <path class="orange" fill-rule="evenodd" d="
+        M 166 6
+        C 80 22 17 89 4 177
+        C -11 278 56 365 158 387
+        C 205 397 253 390 293 369
+        C 349 339 387 284 396 221
+        L 338 233
+        C 322 279 284 315 236 331
+        C 175 352 107 329 72 277
+        C 38 227 40 158 78 110
+        C 104 77 142 54 190 46
+        L 126 265
+        L 238 241
+        L 270 122
+        L 320 178
+        L 289 185
+        L 277 233
+        L 394 208
+        C 393 195 385 183 375 172
+        L 248 31
+        L 241 33
+        L 200 180
+        L 170 187
+        L 226 46
+        Z
+        M 236 155
+        L 266 189
+        L 219 199
+        Z
+      "/>
+      <path fill="#ffffff" d="
+        M 190 46
+        C 142 54 104 77 78 110
+        C 40 158 38 227 72 277
+        C 107 329 175 352 236 331
+        C 284 315 322 279 338 233
+        L 396 221
+        C 387 284 349 339 293 369
+        C 253 390 205 397 158 387
+        C 56 365 -11 278 4 177
+        C 17 89 80 22 166 6
+        L 226 46
+        L 170 187
+        L 200 180
+        L 241 33
+        L 248 31
+        L 375 172
+        C 385 183 393 195 394 208
+        L 277 233
+        L 289 185
+        L 320 178
+        L 270 122
+        L 238 241
+        L 126 265
+        Z
+      " opacity="0"/>
+    </g>
+
+    <text class="wordmark" x="875" y="300">NTECH</text>
+  </g>
+</svg>

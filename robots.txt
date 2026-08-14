@@ -1,0 +1,50 @@
+User-agent: *
+
+# Autoriser les pages publiques importantes
+Allow: /index.php
+Allow: /shop.php
+Allow: /product.php
+Allow: /about.php
+Allow: /contact.php
+Allow: /cart.php
+Allow: /wishlist.php
+Allow: /blog.php
+Allow: /news-single.php
+Allow: /sitemap.xml
+
+# Bloquer tous les portails admin
+Disallow: /admins/
+Disallow: /superadmin/
+Disallow: /backoffice-client/
+
+# Bloquer les dossiers techniques
+Disallow: /config/
+Disallow: /includes/
+Disallow: /migrations/
+Disallow: /classes/
+Disallow: /vendor/
+Disallow: /checkout/ecelestin-Moncash-sdk-php-master/
+Disallow: /logs/
+
+# Bloquer les uploads (éviter l'indexation d'images orphelines)
+Disallow: /uploads/
+
+# Bloquer les pages d'authentification
+Disallow: /login.php
+Disallow: /register.php
+Disallow: /logout.php
+Disallow: /forgot-password.php
+Disallow: /reset-password.php
+
+# Bloquer les pages de traitement (pas de contenu utile)
+Disallow: /moncash-return.php
+Disallow: /moncash-notify.php
+
+# Bloquer les fichiers sensibles (redondant avec .htaccess, mais bonne pratique)
+Disallow: /*.sql$
+Disallow: /*.env$
+Disallow: /*.bak$
+Disallow: /*.log$
+
+# Sitemap
+Sitemap: https://atlantech.shop/sitemap.xml

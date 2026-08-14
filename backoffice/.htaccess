@@ -1,0 +1,8 @@
+# AtlanTech — Redirection backoffice/ → admin/
+# Le panneau admin est maintenant unifié dans /admin/
+
+RewriteEngine On
+
+# Rediriger toutes les pages backoffice vers admin/
+# Ex: /backoffice/products-manager.php → /admin/products-manager.php
+RewriteRule ^(.*)$ /atlantech-shop/admin/$1 [R=301,L]

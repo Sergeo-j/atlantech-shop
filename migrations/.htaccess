@@ -1,0 +1,2 @@
+# Bloquer tout accès direct au dossier /migrations/
+Require all denied

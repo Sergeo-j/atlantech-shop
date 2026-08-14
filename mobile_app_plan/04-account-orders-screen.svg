@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <rect width="390" height="844" rx="34" fill="#081B33"/>
+  <rect x="14" y="14" width="362" height="816" rx="28" fill="#F6F8FB"/>
+  <text x="34" y="70" font-family="Arial" font-size="22" font-weight="700" fill="#081B33">Compte</text>
+  <rect x="34" y="96" width="322" height="104" rx="18" fill="#0B5FFF"/>
+  <circle cx="78" cy="148" r="30" fill="#DCEBFF"/>
+  <text x="68" y="157" font-family="Arial" font-size="24" font-weight="700" fill="#0B5FFF">J</text>
+  <text x="124" y="138" font-family="Arial" font-size="18" font-weight="700" fill="#FFFFFF">Jean Client</text>
+  <text x="124" y="164" font-family="Arial" font-size="13" fill="#DCEBFF">jean@email.com</text>
+  <text x="34" y="244" font-family="Arial" font-size="18" font-weight="700" fill="#1F2937">Commandes recentes</text>
+  <rect x="34" y="262" width="322" height="86" rx="16" fill="#FFFFFF"/>
+  <text x="54" y="292" font-family="Arial" font-size="15" font-weight="700" fill="#1F2937">Commande #ATL-1028</text>
+  <text x="54" y="318" font-family="Arial" font-size="13" fill="#64748B">Smartphone X + accessoires</text>
+  <rect x="252" y="282" width="82" height="28" rx="14" fill="#19A974"/>
+  <text x="268" y="301" font-family="Arial" font-size="12" font-weight="700" fill="#FFFFFF">Livree</text>
+  <rect x="34" y="364" width="322" height="86" rx="16" fill="#FFFFFF"/>
+  <text x="54" y="394" font-family="Arial" font-size="15" font-weight="700" fill="#1F2937">Commande #ATL-1031</text>
+  <text x="54" y="420" font-family="Arial" font-size="13" fill="#64748B">Laptop Pro</text>
+  <rect x="236" y="384" width="98" height="28" rx="14" fill="#FF8A00"/>
+  <text x="253" y="403" font-family="Arial" font-size="12" font-weight="700" fill="#FFFFFF">Preparation</text>
+  <text x="34" y="492" font-family="Arial" font-size="18" font-weight="700" fill="#1F2937">Parametres</text>
+  <g font-family="Arial" font-size="15" fill="#1F2937">
+    <rect x="34" y="512" width="322" height="50" rx="14" fill="#FFFFFF"/>
+    <text x="56" y="543">Adresses de livraison</text>
+    <text x="330" y="543" fill="#64748B">›</text>
+    <rect x="34" y="574" width="322" height="50" rx="14" fill="#FFFFFF"/>
+    <text x="56" y="605">Favoris</text>
+    <text x="330" y="605" fill="#64748B">›</text>
+    <rect x="34" y="636" width="322" height="50" rx="14" fill="#FFFFFF"/>
+    <text x="56" y="667">Support client</text>
+    <text x="330" y="667" fill="#64748B">›</text>
+    <rect x="34" y="698" width="322" height="50" rx="14" fill="#FFFFFF"/>
+    <text x="56" y="729">Preferences et notifications</text>
+    <text x="330" y="729" fill="#64748B">›</text>
+  </g>
+  <rect x="34" y="766" width="322" height="54" rx="16" fill="#081B33"/>
+  <text x="143" y="799" font-family="Arial" font-size="15" font-weight="700" fill="#FFFFFF">Deconnexion</text>
+</svg>

@@ -1,0 +1,92 @@
+# ── Configuration sensible ──────────────────────────────────────────
+config/config.php
+
+# ── Uploads utilisateurs ─────────────────────────────────────────────
+uploads/products/
+uploads/avatars/
+uploads/banners/
+uploads/temp/
+
+# ── Logs ─────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Dépendances & IDE ────────────────────────────────────────────────
+vendor/
+node_modules/
+.env
+.env.local
+
+# ── Éditeurs ─────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Cache PHP / Sessions ─────────────────────────────────────────────
+*.cache
+session/
+
+# ── Fichiers WAMP locaux ─────────────────────────────────────────────
+*.bak
+*.old
+
+# ── Archives & dumps (jamais en historique Git — peuvent contenir des secrets) ──
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.rar
+*.7z
+*.sql
+
+# ── Scripts de déploiement/diagnostic ponctuels (racine, non versionnés) ────
+deploy_*.php
+deploy.php
+diag*.php
+cleanup*.php
+test*.php
+hotfix*.php
+*.php.new
+apply-promo-migration.php
+admin_config_upload.php
+inject_test*.php
+chk*.php
+fix*.php
+patch_*.php
+css_fix.php
+cssfix2.php
+dbcheck_tmp.php
+debug_view.php
+check_cats.php
+verify_*.php
+clear_cache.php
+flush_apcu.php
+flush_opc.php
+purge_cache.php
+run_migration.php
+run-migration-settings.php
+unzip_imgs.php
+get_tail.php
+fixperms.php
+
+# ── Artefacts divers ──────────────────────────────────────────────────
+.fuse_hidden*
+_b64upload/
+Stucture
+*.docx
+
+# ── Archives temporaires sans extension (tempnam() non renomme, contiennent
+#    parfois des bundles d'images — a verifier au cas par cas avant suppression) ──
+ziAxVQTh
+zibTIZcF
+zigPlrjR
+zinFLvZD
+
+# 🔴 chunk_aa..ae = backup complet du projet decoupe en morceaux (contient .env
+#    en clair !). Meme categorie de risque que l'incident du 14/08 — NE JAMAIS
+#    committer, verifier si expose en live, supprimer une fois confirme inutile.
+chunk_a*

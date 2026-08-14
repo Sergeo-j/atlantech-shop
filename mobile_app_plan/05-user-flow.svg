@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520">
+  <rect width="1100" height="520" fill="#F6F8FB"/>
+  <text x="48" y="58" font-family="Arial" font-size="28" font-weight="700" fill="#081B33">Parcours client principal</text>
+  <text x="48" y="88" font-family="Arial" font-size="15" fill="#64748B">De la recherche produit jusqu'au suivi de livraison</text>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#0B5FFF"/>
+    </marker>
+  </defs>
+  <g font-family="Arial">
+    <g>
+      <rect x="50" y="150" width="150" height="86" rx="14" fill="#FFFFFF" stroke="#DCE3EF"/>
+      <text x="82" y="186" font-size="16" font-weight="700" fill="#1F2937">Accueil</text>
+      <text x="74" y="210" font-size="12" fill="#64748B">Recherche/offres</text>
+    </g>
+    <line x1="205" y1="193" x2="260" y2="193" stroke="#0B5FFF" stroke-width="3" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="268" y="150" width="150" height="86" rx="14" fill="#FFFFFF" stroke="#DCE3EF"/>
+      <text x="304" y="186" font-size="16" font-weight="700" fill="#1F2937">Boutique</text>
+      <text x="300" y="210" font-size="12" fill="#64748B">Filtres/categories</text>
+    </g>
+    <line x1="423" y1="193" x2="478" y2="193" stroke="#0B5FFF" stroke-width="3" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="486" y="150" width="150" height="86" rx="14" fill="#FFFFFF" stroke="#DCE3EF"/>
+      <text x="522" y="186" font-size="16" font-weight="700" fill="#1F2937">Produit</text>
+      <text x="514" y="210" font-size="12" fill="#64748B">Prix, stock, avis</text>
+    </g>
+    <line x1="641" y1="193" x2="696" y2="193" stroke="#0B5FFF" stroke-width="3" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="704" y="150" width="150" height="86" rx="14" fill="#FFFFFF" stroke="#DCE3EF"/>
+      <text x="744" y="186" font-size="16" font-weight="700" fill="#1F2937">Panier</text>
+      <text x="734" y="210" font-size="12" fill="#64748B">Promo + total</text>
+    </g>
+    <line x1="859" y1="193" x2="914" y2="193" stroke="#0B5FFF" stroke-width="3" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="922" y="150" width="150" height="86" rx="14" fill="#FFFFFF" stroke="#DCE3EF"/>
+      <text x="955" y="186" font-size="16" font-weight="700" fill="#1F2937">Checkout</text>
+      <text x="948" y="210" font-size="12" fill="#64748B">Livraison/paiement</text>
+    </g>
+    <line x1="997" y1="240" x2="997" y2="302" stroke="#0B5FFF" stroke-width="3" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="922" y="312" width="150" height="86" rx="14" fill="#FFFFFF" stroke="#DCE3EF"/>
+      <text x="962" y="348" font-size="16" font-weight="700" fill="#1F2937">Suivi</text>
+      <text x="948" y="372" font-size="12" fill="#64748B">Statut livraison</text>
+    </g>
+    <line x1="914" y1="355" x2="859" y2="355" stroke="#0B5FFF" stroke-width="3" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="704" y="312" width="150" height="86" rx="14" fill="#FFFFFF" stroke="#DCE3EF"/>
+      <text x="735" y="348" font-size="16" font-weight="700" fill="#1F2937">Compte</text>
+      <text x="738" y="372" font-size="12" fill="#64748B">Historique client</text>
+    </g>
+  </g>
+  <rect x="48" y="444" width="1004" height="40" rx="12" fill="#081B33"/>
+  <text x="72" y="469" font-family="Arial" font-size="14" fill="#FFFFFF">Principe UX : moins d'etapes visibles, prix toujours clair, paiement rassurant, suivi de commande accessible en un tap.</text>
+</svg>
